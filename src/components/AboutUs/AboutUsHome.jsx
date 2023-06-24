@@ -41,7 +41,7 @@ function AboutUsHome() {
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#cta">
+                <a className="nav-link" href="/#pricing">
                   Donate
                 </a>
               </li>

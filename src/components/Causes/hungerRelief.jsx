@@ -47,7 +47,7 @@ function hungerRelief() {
       <div className="form-div">
         <form onSubmit={submit}>
           <div className="form-row">
-            <div className="form col-12">
+            <div className="form col-10">
               <label for="inputEmail4">Full Name</label>
               <input
                 onChange={(e) => handleChange(e)}
@@ -58,7 +58,7 @@ function hungerRelief() {
                 placeholder="Enter Your Full Name"
               />
             </div>
-            <div className="form col-12">
+            <div className="form col-10">
               <label for="inputPassword4">Email Address</label>
               <input
                 onChange={(e) => handleChange(e)}
@@ -70,17 +70,7 @@ function hungerRelief() {
               />
             </div>
           </div>
-          <div className="form-group">
-            <label for="inputAddress2">Address</label>
-            <input
-              onChange={(e) => handleChange(e)}
-              name="address"
-              type="text"
-              className="form-control"
-              id="inputAddress2"
-              placeholder="Apartment, studio, or floor"
-            />
-          </div>
+          
           <div className="form-row">
             <div className="form-group col-md-6">
               <label for="inputCity">Phone Number</label>
@@ -108,6 +98,17 @@ function hungerRelief() {
                 <option value="Education">Education</option>
               </select>
             </div>
+            <div className="form-group col-3">
+            <label for="inputAddress2">Amount</label>
+            <input
+              onChange={(e) => handleChange(e)}
+              name="address"
+              type="text"
+              className="form-control"
+              id="inputAddress2"
+              placeholder="INR"
+            />
+          </div>
           </div>
           <button
             type="submit"
