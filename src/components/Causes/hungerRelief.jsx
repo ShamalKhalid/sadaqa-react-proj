@@ -8,7 +8,7 @@ function hungerRelief() {
     name: "",
     email: "",
     phone: "",
-    address: "",
+    amount: "",
     cause: "",
   });
 
@@ -35,12 +35,14 @@ function hungerRelief() {
       email: form.email,
       phoneNumber: form.phone,
       cause: form.cause,
-      address: form.address,
+      address: form.amount,
+      date: new Date(),
     });
 
+    localStorage.setItem('amount', form.amount)
     setIsSubmitting(false);
+    window.location.href="/payment.html";
   }
-
   return (
     <div>
       <HungerHeader/>
@@ -56,6 +58,7 @@ function hungerRelief() {
                 className="form-control"
                 id="inputname4"
                 placeholder="Enter Your Full Name"
+                required
               />
             </div>
             <div className="form col-10">
@@ -67,6 +70,7 @@ function hungerRelief() {
                 className="form-control"
                 id="inputemail4"
                 placeholder="Enter Your Email"
+                required
               />
             </div>
           </div>
@@ -80,7 +84,9 @@ function hungerRelief() {
                 type="text"
                 className="form-control"
                 id="inputPhone"
+                required
                 onChange={(e) => handleChange(e)}
+                
               />
             </div>
             <div className="form-group col-md-4">
@@ -89,7 +95,9 @@ function hungerRelief() {
                 name="cause"
                 id="inputCause"
                 className="form-control"
+                required
                 onChange={(e) => handleChange(e)}
+                
               >
                 <option selected>Select Cause</option>
                 <option value="General Pool">General Pool</option>
@@ -102,11 +110,12 @@ function hungerRelief() {
             <label for="inputAddress2">Amount</label>
             <input
               onChange={(e) => handleChange(e)}
-              name="address"
-              type="text"
+              name="amount"
+              type="number"
               className="form-control"
               id="inputAddress2"
               placeholder="INR"
+              required
             />
           </div>
           </div>
